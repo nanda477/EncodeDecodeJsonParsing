@@ -74,6 +74,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func getAction(_ sender: Any) {
+        
+        //MARK: Normal method using JSONSerialization
         /*
          guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { return }
  
@@ -86,6 +88,8 @@ class ViewController: UIViewController {
             }catch{}
         }.resume()
         */
+        
+        //MARK: Normal method using Encode&Decode
         
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { return }
         URLSession.shared.dataTask(with: url) { (gData, gResponse, gError) in
